@@ -1,11 +1,19 @@
 <ProcessingScreen>:
-    BoxLayout:
+    MDBoxLayout:
         orientation: 'vertical'
-        Label:
-            text: 'Procesamiento de Imágenes'
-        ProgressBar:
+        padding: "16dp"
+        spacing: "16dp"
+
+        MDLabel:
+            text: "Procesamiento de Imágenes"
+            halign: "center"
+            font_style: "H5"
+
+        MDProgressBar:
             value: root.progress
             max: 100
-        Button:
-            text: 'Iniciar Procesamiento'
-            on_press: root.start_processing()
+
+        MDRaisedButton:
+            text: "Iniciar Procesamiento"
+            on_release: root.start_processing()
+            pos_hint: {"center_x": .5}

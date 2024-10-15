@@ -3,11 +3,11 @@ from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
 
 # Importar las clases de los screens
-from app.logic.selection_screen import SelectionScreen
-from app.logic.config_screen import ConfigScreen
-from app.logic.processing_screen import ProcessingScreen
-from app.logic.analysis_screen import AnalysisScreen
-from app.logic.postprocessing_screen import PostprocessingScreen
+from logic.selection_screen import SelectionScreen
+from logic.config_screen import ConfigScreen
+from logic.processing_screen import ProcessingScreen
+from logic.analysis_screen import AnalysisScreen
+from logic.postprocessing_screen import PostprocessingScreen
 
 class FaunaDetectionApp(MDApp):
     def build(self):
@@ -15,11 +15,11 @@ class FaunaDetectionApp(MDApp):
         self.theme_cls.theme_style = "Dark"
 
         # Cargar los archivos .kv
-        Builder.load_file('app/screens/selection_screen.kv')
-        Builder.load_file('app/screens/config_screen.kv')
-        Builder.load_file('app/screens/processing_screen.kv')
-        Builder.load_file('app/screens/analysis_screen.kv')
-        Builder.load_file('app/screens/postprocessing_screen.kv')
+        Builder.load_file('screens/selection_screen.kv')
+        Builder.load_file('screens/config_screen.kv')
+        Builder.load_file('screens/processing_screen.kv')
+        Builder.load_file('screens/analysis_screen.kv')
+        Builder.load_file('screens/postprocessing_screen.kv')
 
         # Crear el administrador de pantallas
         sm = ScreenManager()

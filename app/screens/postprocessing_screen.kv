@@ -1,11 +1,20 @@
 <PostprocessingScreen>:
-    BoxLayout:
+    MDBoxLayout:
         orientation: 'vertical'
-        Label:
-            text: 'Post-procesamiento'
-        Button:
-            text: 'Exportar Resultados'
-            on_press: root.export_results()
-        Button:
-            text: 'Volver al Inicio'
-            on_press: root.manager.current = 'selection'
+        padding: "16dp"
+        spacing: "16dp"
+
+        MDLabel:
+            text: "Post-procesamiento"
+            halign: "center"
+            font_style: "H5"
+
+        MDRaisedButton:
+            text: "Exportar Resultados"
+            on_release: root.export_results()
+            pos_hint: {"center_x": .5}
+
+        MDRaisedButton:
+            text: "Volver al Inicio"
+            on_release: root.manager.current = 'selection'
+            pos_hint: {"center_x": .5}

@@ -1,11 +1,20 @@
 <AnalysisScreen>:
-    BoxLayout:
+    MDBoxLayout:
         orientation: 'vertical'
-        Label:
-            text: 'Análisis de Resultados'
-        Button:
-            text: 'Mostrar Resultados'
-            on_press: root.show_results()
-        Button:
-            text: 'Siguiente'
-            on_press: root.manager.current = 'postprocessing'
+        padding: "16dp"
+        spacing: "16dp"
+
+        MDLabel:
+            text: "Análisis de Resultados"
+            halign: "center"
+            font_style: "H5"
+
+        MDRaisedButton:
+            text: "Mostrar Resultados"
+            on_release: root.show_results()
+            pos_hint: {"center_x": .5}
+
+        MDRaisedButton:
+            text: "Siguiente"
+            on_release: root.manager.current = 'postprocessing'
+            pos_hint: {"center_x": .5}
