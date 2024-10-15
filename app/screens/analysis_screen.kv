@@ -9,8 +9,16 @@
             halign: "center"
             font_style: "H5"
 
+        MDLabel:
+            text: f"Total de imágenes analizadas: {len(root.results)}"
+            halign: "center"
+
+        MDLabel:
+            text: f"Imágenes con fauna detectada: {sum(1 for r in root.results if r['fauna_detected'])}"
+            halign: "center"
+
         MDRaisedButton:
-            text: "Mostrar Resultados"
+            text: "Mostrar Resultados Detallados"
             on_release: root.show_results()
             pos_hint: {"center_x": .5}
 

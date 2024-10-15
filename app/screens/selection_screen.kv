@@ -14,7 +14,16 @@
             on_release: root.select_folder()
             pos_hint: {"center_x": .5}
 
+        MDLabel:
+            text: f"Carpeta seleccionada: {root.selected_folder}"
+            halign: "center"
+
+        MDLabel:
+            text: f"Imágenes válidas encontradas: {len(root.valid_files)}"
+            halign: "center"
+
         MDRaisedButton:
             text: "Siguiente"
             on_release: root.manager.current = 'config'
             pos_hint: {"center_x": .5}
+            disabled: not root.valid_files
