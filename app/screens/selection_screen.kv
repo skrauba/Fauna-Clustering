@@ -1,0 +1,11 @@
+<SelectionScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Selección de Carpeta'
+        Button:
+            text: 'Seleccionar Carpeta'
+            on_press: root.select_folder()
+        Button:
+            text: 'Siguiente'
+            on_press: root.manager.current = 'config'

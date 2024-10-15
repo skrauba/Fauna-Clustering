@@ -1,0 +1,13 @@
+model:
+  name: "fauna_detection_model"
+  version: "1.0"
+  input_size: [224, 224, 3]
+  threshold: 0.5
+
+processing:
+  batch_size: 32
+  num_workers: 4
+
+analysis:
+  clustering_method: "kmeans"
+  num_clusters: 5

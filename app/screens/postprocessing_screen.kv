@@ -1,0 +1,11 @@
+<PostprocessingScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Post-procesamiento'
+        Button:
+            text: 'Exportar Resultados'
+            on_press: root.export_results()
+        Button:
+            text: 'Volver al Inicio'
+            on_press: root.manager.current = 'selection'

@@ -1,0 +1,11 @@
+<AnalysisScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Análisis de Resultados'
+        Button:
+            text: 'Mostrar Resultados'
+            on_press: root.show_results()
+        Button:
+            text: 'Siguiente'
+            on_press: root.manager.current = 'postprocessing'

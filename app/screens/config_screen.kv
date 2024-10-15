@@ -1,0 +1,11 @@
+<ConfigScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Configuración del Modelo'
+        Button:
+            text: 'Cargar Configuración'
+            on_press: root.load_config()
+        Button:
+            text: 'Siguiente'
+            on_press: root.manager.current = 'processing'

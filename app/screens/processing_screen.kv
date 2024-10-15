@@ -1,0 +1,11 @@
+<ProcessingScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'Procesamiento de Imágenes'
+        ProgressBar:
+            value: root.progress
+            max: 100
+        Button:
+            text: 'Iniciar Procesamiento'
+            on_press: root.start_processing()
