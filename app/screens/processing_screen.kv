@@ -13,7 +13,12 @@
             value: root.progress
             max: 100
 
+        MDLabel:
+            text: f"Procesando: {root.processed_images} / {root.total_images}"
+            halign: "center"
+
         MDRaisedButton:
             text: "Iniciar Procesamiento"
             on_release: root.start_processing()
             pos_hint: {"center_x": .5}
+            disabled: root.progress > 0
